@@ -1,0 +1,12 @@
+{
+  "owner": "6283848013834",
+  "prefix": ".",
+  "name": "Alicia Bot",
+  "version": "1.0.0",
+  "settings": {
+    "autoread": true,
+    "autotyping": false,
+    "read_status": true,
+    "self_mode": false
+  }
+}
