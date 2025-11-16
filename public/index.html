@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlantic API Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌊 Atlantic API Manager</h1>
+            <p>Kelola API Key Atlantic Anda</p>
+        </div>
+        
+        <div class="auth-section">
+            <div id="loginForm">
+                <h2>Login</h2>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button onclick="login()">Login</button>
+            </div>
+            
+            <div id="dashboard" style="display: none;">
+                <h2>Selamat datang, <span id="userName"></span>!</h2>
+                
+                <div class="api-section">
+                    <h3>🔑 API Key Atlantic</h3>
+                    <div class="api-key-display">
+                        <code id="apiKey">Loading...</code>
+                        <button onclick="refreshApiKey()" class="btn-refresh">🔄 Refresh</button>
+                    </div>
+                    
+                    <div class="saldo-info">
+                        <h4>💰 Saldo Atlantic: <span id="saldoAmount">Loading...</span></h4>
+                        <button onclick="checkSaldo()" class="btn-check">🔄 Cek Saldo</button>
+                    </div>
+                </div>
+                
+                <div class="whitelist-section">
+                    <h3>🌐 IP Whitelist</h3>
+                    <textarea id="ipWhitelist" placeholder="Masukkan IP addresses (satu per baris)"></textarea>
+                    <button onclick="updateWhitelist()" class="btn-save">💾 Simpan Whitelist</button>
+                </div>
+                
+                <div class="api-test">
+                    <h3>🧪 Test API Deposit</h3>
+                    <input type="number" id="testNominal" placeholder="Nominal" value="10000">
+                    <button onclick="testDeposit()" class="btn-test">🚀 Test Deposit</button>
+                    <div id="testResult"></div>
+                </div>
+                
+                <button onclick="logout()" class="btn-logout">🚪 Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
